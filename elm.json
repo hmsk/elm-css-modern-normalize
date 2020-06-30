@@ -4,7 +4,9 @@
     "summary": "An Elm port of modern-normalize",
     "license": "MIT",
     "version": "1.0.0",
-    "exposed-modules": [],
+    "exposed-modules": [
+        "Css.ModernNormalize"
+    ],
     "elm-version": "0.19.0 <= v < 0.20.0",
     "dependencies": {
         "elm/core": "1.0.4 <= v < 2.0.0",
