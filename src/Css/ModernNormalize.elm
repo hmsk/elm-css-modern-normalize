@@ -1,5 +1,11 @@
 module Css.ModernNormalize exposing (globalHtml, globalStyledHtml, snippets)
 
+{-| An Elm port of modern-normalize
+
+@docs globalHtml, globalStyledHtml, snippets
+
+-}
+
 import Css
     exposing
         ( auto
@@ -41,16 +47,22 @@ import Html exposing (Html)
 import Html.Styled exposing (toUnstyled)
 
 
+{-| Html msg of a global <style>
+-}
 globalHtml : Html msg
 globalHtml =
     toUnstyled globalStyledHtml
 
 
+{-| Html.Styled.Html msg of a global <style>
+-}
 globalStyledHtml : Html.Styled.Html msg
 globalStyledHtml =
     global snippets
 
 
+{-| elm-css List Snippet for modern-normalize: <https://github.com/sindresorhus/modern-normalize>
+-}
 snippets : List Snippet
 snippets =
     -- https://github.com/sindresorhus/modern-normalize
