@@ -90,7 +90,7 @@ snippets =
         [ fontWeight bolder
         ]
     , selector "code, kbd, samp, pre"
-        [ fontFamilies [ "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", "monospace" ]
+        [ fontFamilies [ "ui-monospace", "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", "monospace" ]
         , fontSize (em 1)
         ]
     , selector "small"
@@ -126,9 +126,6 @@ snippets =
         ]
     , selector "button:-moz-focusring, [type='button']:-moz-focusring, [type='reset']:-moz-focusring, [type='submit']:-moz-focusring"
         [ Css.property "outline" "1px dotted ButtonText"
-        ]
-    , selector "fieldset"
-        [ padding3 (em 0.35) (em 0.75) (em 0.625)
         ]
     , selector "legend"
         [ padding (px 0) ]
