@@ -12,9 +12,12 @@ import Css
         , baseline
         , bolder
         , borderBox
+        , borderColor
         , borderStyle
         , bottom
+        , boxShadow
         , boxSizing
+        , color
         , display
         , dotted
         , em
@@ -31,12 +34,12 @@ import Css
         , num
         , outlineOffset
         , padding
-        , padding3
         , pct
         , position
         , px
         , relative
         , textDecoration2
+        , textIndent
         , textTransform
         , top
         , underline
@@ -82,6 +85,7 @@ snippets =
         ]
     , selector "hr"
         [ height (px 0)
+        , color inherit
         ]
     , selector "abbr[title]"
         [ textDecoration2 underline dotted
@@ -108,6 +112,10 @@ snippets =
     , selector "sup"
         [ top (em -0.5)
         ]
+    , selector "table"
+        [ textIndent (px 0)
+        , borderColor inherit
+        ]
     , selector "button, input, optgroup, select, textarea"
         [ fontFamily inherit
         , fontSize (pct 100)
@@ -120,24 +128,27 @@ snippets =
     , selector "button, [type='button'], [type='reset'], [type='submit']"
         [ Css.property "-webkit-appearance" "button"
         ]
-    , selector "button::-moz-focus-inner, [type='button']::-moz-focus-inner, [type='reset']::-moz-focus-inner, [type='submit']::-moz-focus-inner"
+    , selector "::-moz-focus-inner"
         [ borderStyle none
         , padding (px 0)
         ]
-    , selector "button:-moz-focusring, [type='button']:-moz-focusring, [type='reset']:-moz-focusring, [type='submit']:-moz-focusring"
+    , selector ":-moz-focusring"
         [ Css.property "outline" "1px dotted ButtonText"
+        ]
+    , selector ":-moz-ui-invalid"
+        [ boxShadow none
         ]
     , selector "legend"
         [ padding (px 0) ]
     , selector "progress"
         [ verticalAlign baseline ]
-    , selector "[type='number']::-webkit-inner-spin-button, [type='number']::-webkit-outer-spin-button"
+    , selector "::-webkit-inner-spin-button, ::-webkit-outer-spin-button"
         [ height auto ]
     , selector "[type='search']"
         [ outlineOffset (px -2)
         , Css.property "-webkit-appearance" "textfield"
         ]
-    , selector "[type='search']::-webkit-search-decoration"
+    , selector "::-webkit-search-decoration"
         [ Css.property "-webkit-appearance" "none"
         ]
     , selector "::-webkit-file-upload-button"
