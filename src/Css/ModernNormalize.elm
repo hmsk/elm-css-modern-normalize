@@ -69,8 +69,8 @@ globalStyledHtml =
 snippets : List Snippet
 snippets =
     -- https://github.com/sindresorhus/modern-normalize
-    [ selector "*, *::before, *::after" [ boxSizing borderBox ]
-    , selector ":root"
+    [ selector "*, ::before, ::after" [ boxSizing borderBox ]
+    , selector "html"
         [ Css.property "-moz-tab-size" "4"
         , Css.property "tab-size" "4"
         ]
