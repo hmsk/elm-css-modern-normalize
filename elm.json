@@ -3,7 +3,7 @@
     "name": "hmsk/elm-css-modern-normalize",
     "summary": "An Elm port of modern-normalize",
     "license": "MIT",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "exposed-modules": [
         "Css.ModernNormalize"
     ],
